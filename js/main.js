@@ -30,19 +30,31 @@ let team = [
         immagine: "barbara-ramos-graphic-designer.jpg",
     },
 
-]
-console.log(team)
+];
+
+const container = document.querySelector(".cont-flex");
 
 
-for (let i = 0; i < team.length; i++) {
-    let singleTeam = team[i];
 
-    console.log(singleTeam)
 
-   console.log(`Nome e ruolo del membro del team: ${singleTeam.nome}, ${singleTeam.ruolo}`)
-   
-    // for (const key in singleTeam) {
-    //     console.log(`${key}: ${singleTeam[key]}`)
-    // }
+function printTeam(array) {
 
+    for (let i = 0; i < array.length; i++) {
+        let singleTeam = array[i];
+        let text = document.createElement("p");
+    
+    //    console.log(`Nome e ruolo del membro del team:
+    // ${singleTeam.nome}, ${singleTeam.ruolo}`);
+       
+        for (const key in singleTeam) {
+            console.log(`${key}: ${singleTeam[key]}`);
+            container.append(text);
+            text.append(`${key}: ${singleTeam[key]} `)
+        };
+
+        
+    };
 }
+
+printTeam(team);
+
