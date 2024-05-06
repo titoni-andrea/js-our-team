@@ -39,8 +39,10 @@ for (let i = 0; i < team.length; i++) {
 
     console.log(singleTeam)
 
-    for (const key in singleTeam) {
-        console.log(`${key}: ${singleTeam[key]}`)
-    }
+   console.log(`Nome e ruolo del membro del team: ${singleTeam.nome}, ${singleTeam.ruolo}`)
+   
+    // for (const key in singleTeam) {
+    //     console.log(`${key}: ${singleTeam[key]}`)
+    // }
 
 }
