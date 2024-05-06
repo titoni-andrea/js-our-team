@@ -29,5 +29,18 @@ let team = [
         ruolo: "Graphic Designer",
         immagine: "barbara-ramos-graphic-designer.jpg",
     },
-    
+
 ]
+console.log(team)
+
+
+for (let i = 0; i < team.length; i++) {
+    let singleTeam = team[i];
+
+    console.log(singleTeam)
+
+    for (const key in singleTeam) {
+        console.log(`${key}: ${singleTeam[key]}`)
+    }
+
+}
