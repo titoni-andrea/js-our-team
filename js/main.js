@@ -1,3 +1,4 @@
+// ARRAY DI OGGETTI CON I DATI TEAM
 let team = [
     {
         nome: "Wayne Barnett",
@@ -29,30 +30,42 @@ let team = [
         ruolo: "Graphic Designer",
         immagine: "barbara-ramos-graphic-designer.jpg",
     },
-
 ];
 
+// INIZIO CREAZIONE PAGINA
 const container = document.querySelector(".cont-flex");
 
-
-
-
+// FUNZIONE PER PRENDERE L'OGGETTO DALL'ARRAY E STAMPARLO
 function printTeam(array) {
 
     for (let i = 0; i < array.length; i++) {
         let singleTeam = array[i];
-        let text = document.createElement("p");
-    
-    //    console.log(`Nome e ruolo del membro del team:
-    // ${singleTeam.nome}, ${singleTeam.ruolo}`);
-       
-        for (const key in singleTeam) {
-            console.log(`${key}: ${singleTeam[key]}`);
-            container.append(text);
-            text.append(`${key}: ${singleTeam[key]} `)
-        };
 
-        
+        genCard(singleTeam)
+    };
+}
+
+// FUNZIONE PER CREARE IN PAGINA LE CARD CON I DATI DEL TEAM
+function genCard(oggetto) {
+    let person = document.createElement("div");
+    person.classList.add("card")
+
+    for (const key in oggetto) {
+
+        if (key == "immagine") {
+            console.log("ciao")
+            let imgCard = document.createElement("img")
+            imgCard.src = `img/${oggetto["immagine"]}`
+            person.append(imgCard)
+        }
+
+        else {
+
+            let text = document.createElement("p");
+            container.append(person);
+            person.append(text)
+            text.append(oggetto[key])
+        }
     };
 }
 

@@ -7,3 +7,21 @@
 body {
     font-family: sans-serif;
 }
+
+.cont-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 205, 172);
+    padding: 25px 15px;
+    border-radius: 15px;
+    align-items: center;
+    gap: 15px;
+}
